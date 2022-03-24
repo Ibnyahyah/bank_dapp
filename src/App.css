@@ -1,0 +1,56 @@
+body{
+  background:rgba(0,0,0,0.8);
+  color:white;
+}
+.container{
+  min-height: 90vh;
+}
+.card{
+  width: 60%;
+  margin: auto;
+  background:rgba(255,255,255,0.3);
+}
+
+form{
+  width:100%;
+  margin:auto;
+  border: 1px solid rgb(158, 157, 157);
+  border-radius: 4px;
+  margin-top:10px;
+  margin-bottom:10px;
+  background:gray;
+}
+form input{
+  width:98%;
+  margin:auto;
+  border: none;
+  background:transparent;
+  padding: 10px 5px;
+  outline: none;
+}
+::placeholder{
+  color:rgb(206, 200, 200);
+}
+form button{
+  width:100%;
+  margin:auto;
+  padding: 10px 0;
+  border: none;
+  background-color: black;
+}
+button{
+  padding: 10px;
+  border: none;
+  background-color: black;
+}
+
+
+@media screen and (max-width:920px){
+  .card{
+    width: 100%;
+    margin: auto;
+  }
+  header{
+    font-size: 12px !important;;
+  }
+}
