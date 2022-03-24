@@ -15,8 +15,9 @@ const Main = () => {
     setBankNameHandler,
     accountBalance,
     accountOwner,
-    connect
-    
+    connect,
+    error
+  
   } = useContext(Context);
   return (
     <>
@@ -25,6 +26,7 @@ const Main = () => {
           <header className="font-3 font-md text-black mb-1">
             <h1>IBNBank Contract Project 💰</h1>
           </header>
+          <p className="text-center text-red font-3">{error}</p>
           <div>
             {currentBankName === "" && bankOwner ? (
               <p>"Setup the name of your bank." </p>
@@ -36,7 +38,7 @@ const Main = () => {
           </div>
           <div>
             <p className="font-3 font-md mt-2">Your Account Balance: {accountBalance}</p>
-            <p className="font-3 font-md mt-1">Bank Owner Address: {accountOwner}</p>
+            <p className="font-3 font-md mt-1">Bank Owner Address: {accountOwner && `${ShortenAddress(accountOwner)}`}</p>
             <p className="font-3 font-md mt-1 mb-1">
               Your Bank Wallet Address: {connect ?`${ShortenAddress(customerAddress)}`:null}
             </p>

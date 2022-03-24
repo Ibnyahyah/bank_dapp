@@ -6,7 +6,7 @@ const Deposit = ()=>{
     return(
         <>
             <form>
-                <input type="number" name="deposit" placeholder="0.0000 ETH" onChange={handleInputChange} value={inputValue.deposit}/>
+                <input type="text" name="deposit" placeholder="0.0000 ETH" onChange={handleInputChange} value={inputValue.deposit}/>
                 <button onClick={deposityMoneyHandler}>DEPOSIT MONEY IN ETH</button>
             </form>
         </>
