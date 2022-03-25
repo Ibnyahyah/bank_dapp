@@ -13,7 +13,7 @@ export const ContextProvider = ({ children }) => {
     deposit: "",
     bankName: "",
   });
-  const [accountOwner, setAccountOwner] = useState(null);
+  const [bankOwnerAddress, setBankOwnerAddress] = useState(null);
   const [accountBalance, setAccountBalance] = useState(null);
   const [currentBankName, setCurrentBankName] = useState(null);
   const [error, setError] = useState(null);
@@ -102,7 +102,7 @@ export const ContextProvider = ({ children }) => {
         );
 
         let owner = await bankContract.bankOwner();
-        setAccountOwner(owner);
+        setBankOwnerAddress(owner);
 
         const [account] = await window.ethereum.request({
           method: "eth_requestAccounts",
@@ -211,7 +211,7 @@ export const ContextProvider = ({ children }) => {
     currentBankName: currentBankName,
     setBankNameHandler: setBankNameHandler,
     inputValue: inputValue,
-    accountOwner: accountOwner,
+    bankOwnerAddress: bankOwnerAddress,
     getbankOwnerHandler:getbankOwnerHandler,
     handleInputChange:handleInputChange,
     accountBalance:accountBalance,

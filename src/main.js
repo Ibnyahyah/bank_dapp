@@ -14,8 +14,7 @@ const Main = () => {
     inputValue,
     setBankNameHandler,
     accountBalance,
-    accountOwner,
-    connect,
+    bankOwnerAddress,
     error
   
   } = useContext(Context);
@@ -38,7 +37,7 @@ const Main = () => {
           </div>
           <div>
             <p className="font-3 font-md mt-2">Your Account Balance: {accountBalance}</p>
-            <p className="font-3 font-md mt-1">Bank Owner Address: {accountOwner}</p>
+            <p className="font-3 font-md mt-1">Bank Owner Address: {bankOwnerAddress}</p>
             <p className="font-3 font-md mt-1 mb-1">
               Your Bank Wallet Address: {customerAddress}
             </p>
